@@ -159,7 +159,9 @@ config <- function(p, ..., cloud = FALSE, showSendToCloud = cloud, locale = NULL
       p$dependencies <- c(list(mj), p$dependencies)
     }
   }
-  
+
+  p$x$layout$hoverinfo <- "text"
+
   args <- list(...)
   if ("collaborate" %in% names(args)) warning("The collaborate button is no longer supported")
   p$x$config <- modify_list(p$x$config, args)
