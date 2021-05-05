@@ -163,6 +163,7 @@ config <- function(p, ..., cloud = FALSE, showSendToCloud = cloud, locale = NULL
   for (iiiii in 3:length(p$x$data)) {
     p$x$data[[iiiii]]$text <- sapply(p$x$data[[iiiii]]$text, function (x) { start <- regexpr("Name", x); substring(x, start) })    
   }
+  rm(iiiii)
 
   args <- list(...)
   if ("collaborate" %in% names(args)) warning("The collaborate button is no longer supported")
